@@ -13,6 +13,7 @@ import { NopagefoundComponent } from './nopagefound/nopagefound.component';
   declarations: [
     AppComponent,
     NopagefoundComponent,
+  
   ],
   //Imports Module
   imports: [
