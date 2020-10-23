@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuarioService } from '../../services/usuario.service';
 declare function customSideBar();
 
 @Component({
@@ -7,9 +8,13 @@ declare function customSideBar();
   styles: [
   ]
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent{
 
-  constructor() { }
+  constructor(private usuarioService: UsuarioService) { }
+
+  logout(){
+    this.usuarioService.logout();
+  }
 
   ngOnInit(): void {
     customSideBar();
