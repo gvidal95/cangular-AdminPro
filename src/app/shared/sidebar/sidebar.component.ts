@@ -15,7 +15,7 @@ export class SidebarComponent implements OnInit {
   public imgUrl = '';
   public usuario: Usuario;
 
-  constructor( private sidebarService: SidebarService, usuarioService: UsuarioService) {
+  constructor( public sidebarService: SidebarService, usuarioService: UsuarioService) {
     this.menuItems = this.sidebarService.menu;
     this.imgUrl = usuarioService.usuario.imagenUrl;
     this.usuario = usuarioService.usuario;
